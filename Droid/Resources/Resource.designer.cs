@@ -660,70 +660,67 @@ namespace iVoting.Droid
 			public const int common_plus_signin_btn_text_light_pressed = 2130837571;
 			
 			// aapt resource value: 0x7f020044
-			public const int demo = 2130837572;
+			public const int ic_errorstatus = 2130837572;
 			
 			// aapt resource value: 0x7f020045
-			public const int ic_errorstatus = 2130837573;
+			public const int ic_plusone_medium_off_client = 2130837573;
 			
 			// aapt resource value: 0x7f020046
-			public const int ic_plusone_medium_off_client = 2130837574;
+			public const int ic_plusone_small_off_client = 2130837574;
 			
 			// aapt resource value: 0x7f020047
-			public const int ic_plusone_small_off_client = 2130837575;
+			public const int ic_plusone_standard_off_client = 2130837575;
 			
 			// aapt resource value: 0x7f020048
-			public const int ic_plusone_standard_off_client = 2130837576;
+			public const int ic_plusone_tall_off_client = 2130837576;
 			
 			// aapt resource value: 0x7f020049
-			public const int ic_plusone_tall_off_client = 2130837577;
+			public const int ic_successstatus = 2130837577;
 			
 			// aapt resource value: 0x7f02004a
-			public const int ic_successstatus = 2130837578;
+			public const int messenger_bubble_large_blue = 2130837578;
 			
 			// aapt resource value: 0x7f02004b
-			public const int messenger_bubble_large_blue = 2130837579;
+			public const int messenger_bubble_large_white = 2130837579;
 			
 			// aapt resource value: 0x7f02004c
-			public const int messenger_bubble_large_white = 2130837580;
+			public const int messenger_bubble_small_blue = 2130837580;
 			
 			// aapt resource value: 0x7f02004d
-			public const int messenger_bubble_small_blue = 2130837581;
+			public const int messenger_bubble_small_white = 2130837581;
 			
 			// aapt resource value: 0x7f02004e
-			public const int messenger_bubble_small_white = 2130837582;
+			public const int messenger_button_blue_bg_round = 2130837582;
 			
 			// aapt resource value: 0x7f02004f
-			public const int messenger_button_blue_bg_round = 2130837583;
+			public const int messenger_button_blue_bg_selector = 2130837583;
 			
 			// aapt resource value: 0x7f020050
-			public const int messenger_button_blue_bg_selector = 2130837584;
+			public const int messenger_button_send_round_shadow = 2130837584;
 			
 			// aapt resource value: 0x7f020051
-			public const int messenger_button_send_round_shadow = 2130837585;
+			public const int messenger_button_white_bg_round = 2130837585;
 			
 			// aapt resource value: 0x7f020052
-			public const int messenger_button_white_bg_round = 2130837586;
+			public const int messenger_button_white_bg_selector = 2130837586;
 			
 			// aapt resource value: 0x7f020053
-			public const int messenger_button_white_bg_selector = 2130837587;
+			public const int roundedbg = 2130837587;
 			
 			// aapt resource value: 0x7f020054
-			public const int roundedbg = 2130837588;
+			public const int roundedbgdark = 2130837588;
 			
 			// aapt resource value: 0x7f020055
-			public const int roundedbgdark = 2130837589;
+			public const int sample = 2130837589;
 			
 			// aapt resource value: 0x7f020056
-			public const int sample = 2130837590;
+			public const int splash_logo = 2130837590;
 			
 			// aapt resource value: 0x7f020057
-			public const int splash_logo = 2130837591;
+			public const int splash_screen = 2130837591;
 			
 			// aapt resource value: 0x7f020058
-			public const int splash_screen = 2130837592;
-			
-			// aapt resource value: 0x7f020059
-			public const int votebg = 2130837593;
+			public const int votebg = 2130837592;
 			
 			static Drawable()
 			{

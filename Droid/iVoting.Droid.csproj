@@ -127,7 +127,6 @@
     <AndroidResource Include="Resources\drawable\sample.jpg" />
     <AndroidResource Include="Resources\layout\votenowview.axml" />
     <AndroidResource Include="Resources\layout\votedescview_type02.axml" />
-    <AndroidResource Include="Resources\drawable\demo.mp4" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
