@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:facebook="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFF">
+    <com.facebook.login.widget.ProfilePictureView
+        android:id="@+id/facebookloginview_profilePicture"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="80dp"
+        android:layout_centerInParent="true"
+        facebook:com_facebook_preset_size="normal" />
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/facebookloginview_loginbutton"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="60dp"
+        facebook:com_facebook_confirm_logout="false"
+        facebook:com_facebook_tooltip_mode="never_display" />
+</RelativeLayout>

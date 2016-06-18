@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Xamarin.Build.Download.0.2.1\build\Xamarin.Build.Download.props" Condition="Exists('..\packages\Xamarin.Build.Download.0.2.1\build\Xamarin.Build.Download.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectGuid>{E463F148-218F-4560-8FF7-EFB3AAF5824C}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>iVoting.iOS</RootNamespace>
+    <AssemblyName>iVoting.iOS</AssemblyName>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchFastDev>true</MtouchFastDev>
+    <MtouchUseSGen>true</MtouchUseSGen>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>i386</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
+    <DeviceSpecificBuild>false</DeviceSpecificBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <DefineConstants></DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchUseSGen>true</MtouchUseSGen>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <DefineConstants></DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchUseSGen>true</MtouchUseSGen>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>i386</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer: Huai An Fang (53TT37D6U8)</CodesignKey>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchFastDev>true</MtouchFastDev>
+    <MtouchUseSGen>true</MtouchUseSGen>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>Full</MtouchLink>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
+    <CodesignProvision>5df4d0e0-5de9-4353-94ad-7e71dea81a9d</CodesignProvision>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="Facebook">
+      <HintPath>..\packages\Xamarin.Facebook.iOS.4.10.0.0\lib\Xamarin.iOS10\Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Core">
+      <HintPath>..\packages\Xamarin.Google.iOS.Core.2.0.4.0\lib\Xamarin.iOS10\Google.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.SignIn">
+      <HintPath>..\packages\Xamarin.Google.iOS.SignIn.3.0.0.0\lib\Xamarin.iOS10\Google.SignIn.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Controls.BarChart.iOS">
+      <HintPath>..\Components\barchart-1.1.2.1\lib\ios-unified\Xamarin.Controls.BarChart.iOS.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Image.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Image.imageset\votebg.jpg" />
+    <ImageAsset Include="Assets.xcassets\Route.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Route.imageset\sample.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="Resources\Images\" />
+    <Folder Include="Assets.xcassets\Route.imageset\" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="LaunchScreen.storyboard" />
+    <InterfaceDefinition Include="Main.storyboard" />
+    <InterfaceDefinition Include="VoteImageDescView.xib" />
+    <InterfaceDefinition Include="VoteVideoDescView.xib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="ViewController.cs" />
+    <Compile Include="ViewController.designer.cs">
+      <DependentUpon>ViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FacebookLoginViewController.cs" />
+    <Compile Include="FacebookLoginViewController.designer.cs">
+      <DependentUpon>FacebookLoginViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GoogleLoginViewController.cs" />
+    <Compile Include="GoogleLoginViewController.designer.cs">
+      <DependentUpon>GoogleLoginViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeLoginViewController.cs" />
+    <Compile Include="EmployeeLoginViewController.designer.cs">
+      <DependentUpon>EmployeeLoginViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuViewController.cs" />
+    <Compile Include="MenuViewController.designer.cs">
+      <DependentUpon>MenuViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VoteTableViewCell.cs" />
+    <Compile Include="VoteTableViewCell.designer.cs">
+      <DependentUpon>VoteTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VoteResultViewController.cs" />
+    <Compile Include="VoteResultViewController.designer.cs">
+      <DependentUpon>VoteResultViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VoteDescriptionViewController.cs" />
+    <Compile Include="VoteDescriptionViewController.designer.cs">
+      <DependentUpon>VoteDescriptionViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VoteTitleViewController.cs" />
+    <Compile Include="VoteTitleViewController.designer.cs">
+      <DependentUpon>VoteTitleViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VoteImageDescView.cs" />
+    <Compile Include="VoteImageDescView.designer.cs">
+      <DependentUpon>VoteImageDescView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VoteNowViewController.cs" />
+    <Compile Include="VoteNowViewController.designer.cs">
+      <DependentUpon>VoteNowViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VoteNowCellView.cs" />
+    <Compile Include="VoteNowCellView.designer.cs">
+      <DependentUpon>VoteNowCellView.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <XamarinComponentReference Include="facebookios">
+      <Version>4.10.0.0</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="googleiossignin">
+      <Version>3.0.0.0</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="json.net">
+      <Version>7.0.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="barchart">
+      <Version>1.1.2.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\iVoting\iVoting.csproj">
+      <Project>{3D675328-7321-4A8F-994B-4FBBB7714977}</Project>
+      <Name>iVoting</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="GoogleService-Info.plist" />
+    <BundleResource Include="Resources\Images\sample.jpg" />
+    <BundleResource Include="Resources\Images\splash_logo.png" />
+    <BundleResource Include="Resources\Images\votebg.jpg" />
+    <BundleResource Include="Resources\Images\check.png" />
+    <BundleResource Include="Resources\Images\uncheck.png" />
+    <BundleResource Include="Resources\Images\selected.png" />
+    <BundleResource Include="Resources\Images\unselected.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <Import Project="..\packages\Xamarin.Build.Download.0.2.1\build\Xamarin.Build.Download.targets" Condition="Exists('..\packages\Xamarin.Build.Download.0.2.1\build\Xamarin.Build.Download.targets')" />
+  <Import Project="..\packages\Xamarin.Google.iOS.Core.2.0.4.0\build\Xamarin.Google.iOS.Core.targets" Condition="Exists('..\packages\Xamarin.Google.iOS.Core.2.0.4.0\build\Xamarin.Google.iOS.Core.targets')" />
+  <Import Project="..\packages\Xamarin.Google.iOS.SignIn.3.0.0.0\build\Xamarin.Google.iOS.SignIn.targets" Condition="Exists('..\packages\Xamarin.Google.iOS.SignIn.3.0.0.0\build\Xamarin.Google.iOS.SignIn.targets')" />
+</Project>

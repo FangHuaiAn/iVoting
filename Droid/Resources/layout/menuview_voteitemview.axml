@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="65dp">
+    <RelativeLayout
+        android:id="@+id/menuview_voteitemview_layoutBackground"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#A7D9F5">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:gravity="left|center"
+            android:id="@+id/menuview_voteitemview_lbTitle"
+            android:text="Title"
+            android:textSize="25sp"
+            android:layout_alignParentTop="true" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="left|center"
+            android:id="@+id/menuview_voteitemview_lbDescription"
+            android:text="Description"
+            android:textSize="20sp"
+            android:layout_alignParentBottom="true" />
+        <Button
+            android:id="@+id/menuview_voteitemview_btnVote"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+</RelativeLayout>

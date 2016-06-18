@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_id">1633974333590125</string>
+	<string name="app_name">iVoting</string>
+    <string name="employee">Employee</string>
+    <string name="facebook">Facebook</string>
+    <string name="google">Google</string>
+	<string name="facebook_app_id">1633974333590125</string>
+</resources>

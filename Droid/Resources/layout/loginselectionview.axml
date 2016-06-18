@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/google"
+        android:id="@+id/loginselectionview_btnGoogle"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:textSize="20sp"
+        android:width="200dp" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/facebook"
+        android:id="@+id/loginselectionview_btnFacebook"
+        android:layout_below="@id/loginselectionview_btnGoogle"
+        android:layout_alignLeft="@id/loginselectionview_btnGoogle"
+        android:layout_alignStart="@id/loginselectionview_btnGoogle"
+        android:layout_marginTop="40dp"
+        android:layout_alignRight="@id/loginselectionview_btnGoogle"
+        android:layout_alignEnd="@id/loginselectionview_btnGoogle"
+        android:width="200dp"
+        android:textSize="20sp" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/employee"
+        android:id="@+id/loginselectionview_btnEmployee"
+        android:layout_below="@id/loginselectionview_btnFacebook"
+        android:layout_alignLeft="@id/loginselectionview_btnFacebook"
+        android:layout_alignStart="@id/loginselectionview_btnFacebook"
+        android:layout_marginTop="40dp"
+        android:layout_alignRight="@id/loginselectionview_btnFacebook"
+        android:layout_alignEnd="@id/loginselectionview_btnFacebook"
+        android:textSize="20sp" />
+</RelativeLayout>
