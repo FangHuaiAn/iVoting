@@ -9,14 +9,17 @@ using System.CodeDom.Compiler;
 
 namespace iVoting.Editor.iOS
 {
-	[Register ("StatusCellView")]
-	partial class StatusCellView
+	[Register ("FlowVerifyViewController")]
+	partial class FlowVerifyViewController
 	{
 		[Outlet]
-		UIKit.UIButton btnStatus { get; set; }
+		UIKit.UIButton btnApprove { get; set; }
 
 		[Outlet]
-		UIKit.UILabel lbStatus { get; set; }
+		UIKit.UIButton btnReject { get; set; }
+
+		[Outlet]
+		UIKit.UILabel lbDescription { get; set; }
 
 		[Outlet]
 		UIKit.UILabel lbTitle { get; set; }
@@ -28,14 +31,19 @@ namespace iVoting.Editor.iOS
 				lbTitle = null;
 			}
 
-			if (btnStatus != null) {
-				btnStatus.Dispose ();
-				btnStatus = null;
+			if (lbDescription != null) {
+				lbDescription.Dispose ();
+				lbDescription = null;
 			}
 
-			if (lbStatus != null) {
-				lbStatus.Dispose ();
-				lbStatus = null;
+			if (btnApprove != null) {
+				btnApprove.Dispose ();
+				btnApprove = null;
+			}
+
+			if (btnReject != null) {
+				btnReject.Dispose ();
+				btnReject = null;
 			}
 		}
 	}

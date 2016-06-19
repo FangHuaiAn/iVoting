@@ -21,6 +21,7 @@ namespace iVoting.Editor.iOS
 				if (null != handle) {
 					handle (this, new FeatureSelectedEventArgs {SelectedFeatureName = "Edit" });
 				}
+				DismissViewController (true, null);
 			};
 
 			btnVerify.TouchUpInside += (sender, e) => {
@@ -28,6 +29,7 @@ namespace iVoting.Editor.iOS
 				if (null != handle) {
 					handle (this, new FeatureSelectedEventArgs { SelectedFeatureName = "Verify" });
 				}
+				DismissViewController (true, null);
 			};
 
 			btnPublish.TouchUpInside += (sender, e) => {
@@ -35,6 +37,7 @@ namespace iVoting.Editor.iOS
 				if (null != handle) {
 					handle (this, new FeatureSelectedEventArgs { SelectedFeatureName = "Publish" });
 				}
+				DismissViewController (true, null);
 			};
 		}
 

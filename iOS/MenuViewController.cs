@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Collections.Generic;
 
 using UIKit;
 using Foundation;
-
-using Debug = System.Diagnostics.Debug;
 
 namespace iVoting.iOS
 {
@@ -93,15 +88,14 @@ namespace iVoting.iOS
 			public TableSource (List<Vote> items)
 			{
 
-				this.Items = new List<Vote> ();
-
-				this.Items.AddRange (items);
+				Items = new List<Vote> ();
+				Items.AddRange (items);
 
 			}
 
 			public override nint RowsInSection (UITableView tableview, nint section)
 			{
-				return this.Items.Count;
+				return Items.Count;
 			}
 
 			public override UITableViewCell GetCell (UITableView tableView, NSIndexPath indexPath)
@@ -152,8 +146,6 @@ namespace iVoting.iOS
 		{
 			public Vote SelectedVote { get; set; }
 		}
-
-
 
 	}
 }

@@ -45,6 +45,7 @@ namespace iVoting
 		Reject,
 		Release,
 		Close,
+		Request,
 	}
 
 	public class EditingVote { 
@@ -59,6 +60,24 @@ namespace iVoting
 	}
 
 	public class VoteManager {
+
+		private static List<string> _statusTitles;
+		public static List<string> StatusTitles { 
+			get {
+
+				if (null == _statusTitles) {
+					_statusTitles = new List<string> {
+						@"Edit",
+						@"Approve",
+						@"Reject",
+						@"Release",
+						@"Close"
+					};
+				}
+
+				return _statusTitles;
+			}
+		}
 
 		public Vote CreateVote (string title, string description) {
 
@@ -157,18 +176,154 @@ namespace iVoting
 			return votes;
 		}
 
-
 		public List<EditingVote> ReadEditVotesFromRemote () {
 			var results = new List<EditingVote> ();
 
 			results.Add (
-				new EditingVote { 
-				
-				
-				
+				new EditingVote {
+					EditVote = new Vote {
+						Title = "開闢極光航線",
+						Description = "感受莊麗美景",
+						StartTime = new DateTime (2016, 8, 1, 0, 1, 1),
+						EndTime = new DateTime (2016, 8, 31, 23, 59, 59),
+						SelectType = AnswerType.Single,
+						ImageUrl = "",
+						VideoUrl = "",
+						Answers = new List<Answer> {
+							new Answer{
+								Title = "開闢",
+								Description = "地球人一定要看",
+								Id = 1001,
+								GroupId = 0,
+								Count = 0,
+							},
+							new Answer{
+								Title = "不開闢",
+								Description = "我怕冷",
+								Id = 1002,
+								GroupId = 0,
+								Count = 0,
+							},
+						},
+					},
+					Status = EditStatus.Approve,
+					Editor = new Employee { Name = "小編" },
+					Manager = new Employee { Name = "Boss" },
+				}
+			);
+			
+			results.Add (
+				new EditingVote {
+					EditVote = new Vote {
+						Title = "開闢南美航線",
+						Description = "感受南美人文風情",
+						StartTime = new DateTime (2016, 8, 1, 0, 1, 1),
+						EndTime = new DateTime (2016, 8, 31, 23, 59, 59),
+						SelectType = AnswerType.Multi,
+						ImageUrl = "",
+						VideoUrl = "",
+						Answers = new List<Answer> {
+							new Answer{
+								Title = "巴西",
+								Description = "去看熱情森巴",
+								Id = 1001,
+								GroupId = 0,
+								Count = 0,
+							},
+							new Answer{
+								Title = "阿根廷",
+								Description = "大草原",
+								Id = 1002,
+								GroupId = 0,
+								Count = 0,
+							},
+						},
+					},
+					Status = EditStatus.Edit,
+					Editor = new Employee { Name = "小編" },
+					Manager = new Employee { Name = "Boss" },
 				}
 			);
 
+			results.Add (
+				new EditingVote {
+					EditVote = new Vote {
+						Title = @"員工旅遊地點",
+						Description = @"就出去走走吧",
+
+						StartTime = new DateTime (2016, 6, 1, 8, 0, 0),
+						EndTime = new DateTime (2016, 6, 30, 23, 59, 59),
+
+						ImageUrl = "",
+						VideoUrl = "http://techslides.com/demos/sample-videos/small.mp4",
+
+						SelectType = AnswerType.Single,
+						Answers = new List<Answer> {
+							new Answer{
+								Title = @"阿拉斯加",
+								Description = @"體驗北國風情",
+								GroupId = 0,
+								Count =100,
+								Id = 1001,
+							},
+							new Answer{
+								Title = @"紐約。紐約",
+								Description = @"百老匯歌舞秀",
+								GroupId = 0,
+								Count =150,
+								Id = 1002,
+							},
+							new Answer{
+								Title = @"峇里島 Villa",
+								Description = @"完全放鬆",
+								GroupId = 0,
+								Count =400,
+								Id = 1003,
+							}
+						}
+					}
+				}
+			);
+
+			results.Add (
+				new EditingVote {
+					EditVote = new Vote {
+						Title = @"增加特休天數",
+						Description = @"實在太累",
+
+						StartTime = new DateTime (2016, 1, 1, 8, 0, 0),
+						EndTime = new DateTime (2016, 1, 31, 23, 59, 59),
+
+						ImageUrl = "",
+						VideoUrl = "http://techslides.com/demos/sample-videos/small.mp4",
+
+						Answers = new List<Answer> {
+							new Answer{
+								Title = @"新增一天",
+								Description = @"一天就好",
+								GroupId = 0,
+								Count =125,
+							},
+							new Answer{
+								Title = @"新增五天",
+								Description = @"五福臨門",
+								GroupId = 0,
+								Count =150,
+							},
+							new Answer{
+								Title = @"新增十天",
+								Description = @"十全十美",
+								GroupId = 0,
+								Count =120,
+							}
+						}
+
+					},
+					Status = EditStatus.Close,
+					Editor = new Employee { Name = "小編" },
+					Manager = new Employee { Name = "Boss" },
+				}
+			);
 
 			return results;
 		}

@@ -101,6 +101,7 @@
     <Folder Include="Resources\Images\" />
     <Folder Include="Assets.xcassets\MenuImage.imageset\" />
     <Folder Include="Cell\" />
+    <Folder Include="Flow\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -130,6 +131,26 @@
     <Compile Include="Cell\StatusCellView.designer.cs">
       <DependentUpon>StatusCellView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Flow\Flow01ViewController.cs" />
+    <Compile Include="Flow\Flow01ViewController.designer.cs">
+      <DependentUpon>Flow01ViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Flow\FlowVideoViewController.cs" />
+    <Compile Include="Flow\FlowVideoViewController.designer.cs">
+      <DependentUpon>FlowVideoViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Flow\FlowImageViewController.cs" />
+    <Compile Include="Flow\FlowImageViewController.designer.cs">
+      <DependentUpon>FlowImageViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Flow\FlowVerifyViewController.cs" />
+    <Compile Include="Flow\FlowVerifyViewController.designer.cs">
+      <DependentUpon>FlowVerifyViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Flow\FlowLayoutSelectionViewController.cs" />
+    <Compile Include="Flow\FlowLayoutSelectionViewController.designer.cs">
+      <DependentUpon>FlowLayoutSelectionViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Images\check.png" />
@@ -140,6 +161,8 @@
     <BundleResource Include="Resources\Images\unselected.png" />
     <BundleResource Include="Resources\Images\votebg.jpg" />
     <BundleResource Include="Resources\Images\list.png" />
+    <BundleResource Include="Resources\Images\imageDesc1.png" />
+    <BundleResource Include="Resources\Images\imageDesc2.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\iVoting\iVoting.csproj">

@@ -17,9 +17,17 @@ namespace iVoting.Editor.iOS
 
 		[Outlet]
 		UIKit.UIBarButtonItem btnMenu { get; set; }
+
+		[Outlet]
+		UIKit.UITableView editingVoteTable { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
+			if (editingVoteTable != null) {
+				editingVoteTable.Dispose ();
+				editingVoteTable = null;
+			}
+
 			if (btnAdd != null) {
 				btnAdd.Dispose ();
 				btnAdd = null;
