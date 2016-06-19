@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -457,20 +456,34 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11">
-                                <rect key="frame" x="57" y="75" width="149" height="284"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11">
+                                <rect key="frame" x="50" y="75" width="149" height="284"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="284" id="91I-Bl-EES"/>
+                                    <constraint firstAttribute="width" constant="149" id="yDq-CC-nEB"/>
+                                </constraints>
                                 <state key="normal" image="Images/imageDesc1.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="12">
-                                <rect key="frame" x="362" y="75" width="149" height="284"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="12">
+                                <rect key="frame" x="381" y="75" width="149" height="284"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="284" id="RHR-G0-tf3"/>
+                                    <constraint firstAttribute="width" constant="149" id="hoC-2r-2ZQ"/>
+                                </constraints>
                                 <state key="normal" image="Images/imageDesc2.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="12" secondAttribute="trailing" constant="50" id="Cpq-eL-gWL"/>
+                            <constraint firstItem="11" firstAttribute="top" secondItem="Dij-EY-E2O" secondAttribute="bottom" constant="75" id="Ubk-lH-MnA"/>
+                            <constraint firstItem="12" firstAttribute="top" secondItem="Dij-EY-E2O" secondAttribute="bottom" constant="75" id="cIe-3l-QFo"/>
+                            <constraint firstItem="11" firstAttribute="leading" secondItem="qve-9T-MDB" secondAttribute="leadingMargin" constant="30" id="e4U-wa-Xhs"/>
+                        </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="選擇版型" id="AEh-Nr-Pcs"/>
@@ -497,23 +510,58 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="Images/imageDesc2.png" translatesAutoresizingMaskIntoConstraints="NO" id="14">
-                                <rect key="frame" x="65" y="36" width="191" height="367"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Images/imageDesc2.png" translatesAutoresizingMaskIntoConstraints="NO" id="14">
+                                <rect key="frame" x="50" y="75" width="196" height="386"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="386" id="Cxw-vD-pbC"/>
+                                    <constraint firstAttribute="width" constant="196" id="oOY-Gg-UvW"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f21-6j-YQk">
-                                <rect key="frame" x="304" y="168" width="200" height="30"/>
-                                <state key="normal" title="編輯說明文字"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f21-6j-YQk">
+                                <rect key="frame" x="380" y="253" width="200" height="30"/>
+                                <color key="backgroundColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Jj8-gX-lel"/>
+                                    <constraint firstAttribute="width" constant="200" id="Xic-8b-vYS"/>
+                                </constraints>
+                                <state key="normal" title="編輯說明文字">
+                                    <color key="titleColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chx-go-AbT">
-                                <rect key="frame" x="304" y="373" width="200" height="30"/>
-                                <state key="normal" title="設定影像"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rbh-pW-5pw">
+                                <rect key="frame" x="200" y="486" width="200" height="30"/>
+                                <color key="backgroundColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="nDM-yt-BpT"/>
+                                    <constraint firstAttribute="height" constant="30" id="t4g-dz-7vo"/>
+                                </constraints>
+                                <state key="normal" title="Confirm">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rbh-pW-5pw">
-                                <rect key="frame" x="187" y="486" width="104" height="30"/>
-                                <state key="normal" title="Confirm"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chx-go-AbT">
+                                <rect key="frame" x="380" y="431" width="200" height="30"/>
+                                <color key="backgroundColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="TVf-Cf-lbX"/>
+                                    <constraint firstAttribute="width" constant="200" id="v3S-Wm-Pyn"/>
+                                </constraints>
+                                <state key="normal" title="設定影像">
+                                    <color key="titleColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="lAA-AA-BfS" firstAttribute="top" secondItem="Rbh-pW-5pw" secondAttribute="bottom" constant="20" id="C0e-tP-fYF"/>
+                            <constraint firstItem="Rbh-pW-5pw" firstAttribute="centerX" secondItem="c7Z-Lo-xV5" secondAttribute="centerX" id="H7t-QU-hIz"/>
+                            <constraint firstItem="Rbh-pW-5pw" firstAttribute="top" secondItem="chx-go-AbT" secondAttribute="bottom" constant="25" id="O5N-aa-3Bd"/>
+                            <constraint firstItem="14" firstAttribute="top" secondItem="I01-3O-7mM" secondAttribute="bottom" constant="75" id="P59-HH-tyR"/>
+                            <constraint firstItem="f21-6j-YQk" firstAttribute="trailing" secondItem="c7Z-Lo-xV5" secondAttribute="trailingMargin" id="XgD-Z2-3L4"/>
+                            <constraint firstItem="chx-go-AbT" firstAttribute="trailing" secondItem="c7Z-Lo-xV5" secondAttribute="trailingMargin" id="bOe-Eg-sLT"/>
+                            <constraint firstItem="f21-6j-YQk" firstAttribute="centerY" secondItem="c7Z-Lo-xV5" secondAttribute="centerY" id="hqL-XU-qBq"/>
+                            <constraint firstItem="14" firstAttribute="leading" secondItem="c7Z-Lo-xV5" secondAttribute="leadingMargin" constant="30" id="oMi-Wx-mFu"/>
+                        </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="影片說明" id="I12-t4-rRx"/>
@@ -539,23 +587,59 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="Images/imageDesc1.png" translatesAutoresizingMaskIntoConstraints="NO" id="13">
-                                <rect key="frame" x="63" y="73" width="196" height="386"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Images/imageDesc1.png" translatesAutoresizingMaskIntoConstraints="NO" id="13">
+                                <rect key="frame" x="50" y="75" width="196" height="386"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="196" id="Aqb-LC-K49"/>
+                                    <constraint firstAttribute="height" constant="386" id="K55-wW-AR2"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ixc-Yg-aC3">
-                                <rect key="frame" x="267" y="241" width="200" height="30"/>
-                                <state key="normal" title="編輯說明文字"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="StT-8W-LTL">
+                                <rect key="frame" x="380" y="431" width="200" height="30"/>
+                                <color key="backgroundColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="rS1-8K-A5t"/>
+                                    <constraint firstAttribute="width" constant="200" id="yXO-LI-JrY"/>
+                                </constraints>
+                                <state key="normal" title="設定圖示">
+                                    <color key="titleColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="StT-8W-LTL">
-                                <rect key="frame" x="267" y="429" width="200" height="30"/>
-                                <state key="normal" title="設定圖示"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Qz-p9-vxm">
+                                <rect key="frame" x="200" y="486" width="200" height="30"/>
+                                <color key="backgroundColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="3yK-Yv-QEo"/>
+                                    <constraint firstAttribute="width" constant="200" id="MlB-ZT-doB"/>
+                                </constraints>
+                                <state key="normal" title="Confirm">
+                                    <color key="titleColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Qz-p9-vxm">
-                                <rect key="frame" x="209" y="486" width="99" height="30"/>
-                                <state key="normal" title="Confirm"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ixc-Yg-aC3">
+                                <rect key="frame" x="380" y="253" width="200" height="30"/>
+                                <color key="backgroundColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="3wP-dx-iQl"/>
+                                    <constraint firstAttribute="height" constant="30" id="8kE-ns-wMH"/>
+                                </constraints>
+                                <state key="normal" title="編輯說明文字">
+                                    <color key="titleColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="13" firstAttribute="leading" secondItem="Jrm-ic-bhu" secondAttribute="leadingMargin" constant="30" id="83t-Bh-2Ag"/>
+                            <constraint firstItem="ixc-Yg-aC3" firstAttribute="centerY" secondItem="Jrm-ic-bhu" secondAttribute="centerY" id="EsU-mS-vQK"/>
+                            <constraint firstItem="StT-8W-LTL" firstAttribute="trailing" secondItem="Jrm-ic-bhu" secondAttribute="trailingMargin" id="FE6-vE-lmA"/>
+                            <constraint firstItem="ixc-Yg-aC3" firstAttribute="trailing" secondItem="Jrm-ic-bhu" secondAttribute="trailingMargin" id="Jx3-3O-Ipx"/>
+                            <constraint firstItem="13" firstAttribute="top" secondItem="dT7-82-IpW" secondAttribute="bottom" constant="75" id="TfJ-2i-XWH"/>
+                            <constraint firstItem="VIk-cM-v56" firstAttribute="top" secondItem="5Qz-p9-vxm" secondAttribute="bottom" constant="20" id="bPc-oI-bWi"/>
+                            <constraint firstItem="5Qz-p9-vxm" firstAttribute="centerX" secondItem="Jrm-ic-bhu" secondAttribute="centerX" id="hoY-ew-YcI"/>
+                            <constraint firstItem="5Qz-p9-vxm" firstAttribute="top" secondItem="StT-8W-LTL" secondAttribute="bottom" constant="25" id="sx0-DO-xI3"/>
+                        </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="圖片說明" id="BUv-iF-0S2"/>

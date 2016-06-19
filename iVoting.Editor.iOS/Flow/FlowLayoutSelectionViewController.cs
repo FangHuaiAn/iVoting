@@ -15,7 +15,18 @@ namespace iVoting.Editor.iOS
 		{
 			base.ViewDidLoad ();
 			// Perform any additional setup after loading the view, typically from a nib.
+
+			btnImage.TouchUpInside += (sender, e) => {
+				PerformSegue ("moveToImageEditViewSegue", this);
+			};
+
+			btnVideo.TouchUpInside += (sender, e) => {
+				PerformSegue ("moveToVideoViewSegue", this);
+			};
+		
 		}
+
+
 
 		public override void DidReceiveMemoryWarning ()
 		{

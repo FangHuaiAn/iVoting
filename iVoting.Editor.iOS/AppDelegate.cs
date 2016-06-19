@@ -10,6 +10,8 @@ namespace iVoting.Editor.iOS
 	{
 		// class-level declarations
 
+		public static EditingVote SelectedEditingVote { get; set; }
+
 		public override UIWindow Window {
 			get;
 			set;

@@ -14,6 +14,7 @@ namespace iVoting.Editor.iOS
 		{
 			base.ViewDidLoad ();
 			// Perform any additional setup after loading the view, typically from a nib.
+			btnNext.TouchUpInside += (sender, e) => { this.NavigationController.PopToRootViewController (true); };
 		}
 
 		public override void DidReceiveMemoryWarning ()
