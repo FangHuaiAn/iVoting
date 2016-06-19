@@ -33,7 +33,10 @@ namespace iVoting.Editor.iOS
 				if ("Edit" == e.SelectedFeatureName) {
 					btnAdd.Enabled = true;
 				} 
-				else { 
+				else if ("Edit" == e.SelectedFeatureName) {
+					btnAdd.Enabled = true;
+				} 
+				else {
 					btnAdd.Enabled = false;
 				}
 

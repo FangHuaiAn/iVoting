@@ -71,7 +71,8 @@ namespace iVoting
 						@"Approve",
 						@"Reject",
 						@"Release",
-						@"Close"
+						@"Close",
+						@"Request"
 					};
 				}
 
@@ -297,6 +298,7 @@ namespace iVoting
 						ImageUrl = "",
 						VideoUrl = "http://techslides.com/demos/sample-videos/small.mp4",
 
+						SelectType = AnswerType.Single,
 						Answers = new List<Answer> {
 							new Answer{
 								Title = @"新增一天",
@@ -320,6 +322,41 @@ namespace iVoting
 
 					},
 					Status = EditStatus.Close,
+					Editor = new Employee { Name = "小編" },
+					Manager = new Employee { Name = "Boss" },
+				}
+			);
+
+			results.Add (
+				new EditingVote {
+					EditVote = new Vote {
+						Title = @"加薪20%外加特休20天",
+						Description = @"實在太累",
+
+						StartTime = new DateTime (2016, 1, 1, 8, 0, 0),
+						EndTime = new DateTime (2016, 1, 31, 23, 59, 59),
+
+						ImageUrl = "",
+						VideoUrl = "http://techslides.com/demos/sample-videos/small.mp4",
+
+						SelectType = AnswerType.Single,
+						Answers = new List<Answer> {
+							new Answer{
+								Title = @"YES",
+								Description = @"一天就好",
+								GroupId = 0,
+								Count = 0,
+							},
+							new Answer{
+								Title = @"NO",
+								Description = @"五福臨門",
+								GroupId = 0,
+								Count = 0,
+							},
+						}
+
+					},
+					Status = EditStatus.Request,
 					Editor = new Employee { Name = "小編" },
 					Manager = new Employee { Name = "Boss" },
 				}

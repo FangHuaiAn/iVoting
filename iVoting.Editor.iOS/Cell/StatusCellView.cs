@@ -38,7 +38,10 @@ namespace iVoting.Editor.iOS
 					btnStatus.SetTitle ("目前狀況", UIControlState.Normal);
 				}
 				break;
-
+				case EditStatus.Request: { 
+					btnStatus.SetTitle ("審核", UIControlState.Normal);
+				}
+				break;
 			
 			}
 
