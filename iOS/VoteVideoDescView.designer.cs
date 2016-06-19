@@ -11,18 +11,11 @@ using UIKit;
 
 namespace iVoting.iOS
 {
-    [Register ("VoteResultViewController")]
-    partial class VoteResultViewController
+    [Register ("VoteVideoDescView")]
+    partial class VoteVideoDescView
     {
-        [Outlet]
-        UIKit.UIBarButtonItem btnBack { get; set; }
-
         void ReleaseDesignerOutlets ()
         {
-            if (btnBack != null) {
-                btnBack.Dispose ();
-                btnBack = null;
-            }
         }
     }
 }

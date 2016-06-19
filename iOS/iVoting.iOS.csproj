@@ -182,6 +182,10 @@
     <Compile Include="VoteNowCellView.designer.cs">
       <DependentUpon>VoteNowCellView.cs</DependentUpon>
     </Compile>
+    <Compile Include="VoteVideoDescView.cs" />
+    <Compile Include="VoteVideoDescView.designer.cs">
+      <DependentUpon>VoteVideoDescView.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="facebookios">
