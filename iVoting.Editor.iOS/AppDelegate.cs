@@ -1,5 +1,8 @@
-﻿using Foundation;
+﻿using System.Collections.Generic;
+
 using UIKit;
+using Foundation;
+
 
 namespace iVoting.Editor.iOS
 {
@@ -11,6 +14,7 @@ namespace iVoting.Editor.iOS
 		// class-level declarations
 
 		public static EditingVote SelectedEditingVote { get; set; }
+		public static List<EditingVote> EditingVotes { get; set; }
 
 		public override UIWindow Window {
 			get;

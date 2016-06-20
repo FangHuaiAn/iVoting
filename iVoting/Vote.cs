@@ -57,6 +57,8 @@ namespace iVoting
 
 		public Vote EditVote { get; set; }
 
+		public string Target { get; set; }
+		public string Reason { get; set; }
 	}
 
 	public class VoteManager {
@@ -329,6 +331,8 @@ namespace iVoting
 
 			results.Add (
 				new EditingVote {
+					Target = "激勵員工士氣",
+					Reason = "大家開心",
 					EditVote = new Vote {
 						Title = @"加薪20%外加特休20天",
 						Description = @"實在太累",
@@ -343,13 +347,13 @@ namespace iVoting
 						Answers = new List<Answer> {
 							new Answer{
 								Title = @"YES",
-								Description = @"一天就好",
+								Description = @"誰反對？",
 								GroupId = 0,
 								Count = 0,
 							},
 							new Answer{
 								Title = @"NO",
-								Description = @"五福臨門",
+								Description = @"我腦殘",
 								GroupId = 0,
 								Count = 0,
 							},

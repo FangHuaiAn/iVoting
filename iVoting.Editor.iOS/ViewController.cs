@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 using UIKit;
 
@@ -15,6 +16,9 @@ namespace iVoting.Editor.iOS
 		{
 			base.ViewDidLoad ();
 			// 
+			if (null == AppDelegate.EditingVotes) {
+				AppDelegate.EditingVotes = new List<EditingVote> ();
+			}
 
 			btnLogin.TouchUpInside += (sender, e) => {
 				PerformSegue ("moveToMenuViewSegue", this);

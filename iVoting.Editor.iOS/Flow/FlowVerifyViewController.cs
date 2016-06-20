@@ -13,10 +13,21 @@ namespace iVoting.Editor.iOS
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
-			// Perform any additional setup after loading the view, typically from a nib.
-			btnApprove.TouchUpInside += (sender, e) => { this.NavigationController.PopToRootViewController (true);};
+			// 
 
-			btnReject.TouchUpInside += (sender, e) => { this.NavigationController.PopToRootViewController (true); };
+			lbTitle.Text = AppDelegate.SelectedEditingVote.Target;
+			lbDescription.Text = AppDelegate.SelectedEditingVote.Reason;
+
+			btnApprove.TouchUpInside += (sender, e) => {
+				AppDelegate.SelectedEditingVote.Status = EditStatus.Approve;
+				NavigationController.PopToRootViewController (true);
+			
+			};
+
+			btnReject.TouchUpInside += (sender, e) => {
+				AppDelegate.SelectedEditingVote.Status = EditStatus.Reject;
+				NavigationController.PopToRootViewController (true); 
+			};
 		}
 
 		public override void DidReceiveMemoryWarning ()

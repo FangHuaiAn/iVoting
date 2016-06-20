@@ -54,16 +54,27 @@ namespace iVoting.Editor.iOS
 			};
 
 			var editingVotes = new VoteManager ().ReadEditVotesFromRemote ();
+			AppDelegate.EditingVotes.AddRange (editingVotes);
 
-			var source = new TableSource (editingVotes);
+			var source = new TableSource (AppDelegate.EditingVotes);
 
 			editingVoteTable.Source = source;
 
 			source.EditingVoteSelected += ( sender, e) => {
-				if (e.SelectedEditingVote.Status == EditStatus.Request) {
+
+				AppDelegate.SelectedEditingVote = e.SelectedEditingVote;
+
+				if (AppDelegate.SelectedEditingVote.Status == EditStatus.Request) {
 					PerformSegue ("moveToVerifyViewSegue", this);
 				}
 			};
+		}
+
+		public override void ViewDidAppear (bool animated)
+		{
+			base.ViewDidAppear (animated);
+
+			editingVoteTable.ReloadData ();
 		}
 
 		public override void DidReceiveMemoryWarning ()
